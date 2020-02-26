@@ -1,0 +1,28 @@
+CREATE TABLE t_utilisateurs 
+(
+    id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    nom VARCHAR(100),
+    prenom VARCHAR(100),
+    email VARCHAR(255),
+    date_naissance DATE,
+    pays VARCHAR(255),
+    ville VARCHAR(255),
+    code_postal VARCHAR(5),
+    nombre_achat INT
+)
+
+INSERT INTO t_utilisateurs (id, nom, prenom, email, date_naissance, pays, ville, code_postal, nombre_achat) values (NULL, 'Bond', 'James','james.bond@gmail.com','1945-08-04','Angleterre', 'Londres', '93500', NULL);
+
+INSERT INTO t_utilisateurs (id, nom, prenom, email, date_naissance, pays, ville, code_postal, nombre_achat) values (NULL, 'Caroll', 'Stéphanie','stephaniecaroll@gmail.com','1980-01-02','Belgique', 'Bruxelle', '92500', NULL);
+
+INSERT INTO t_utilisateurs (id, nom, prenom, email, date_naissance, pays, ville, code_postal, nombre_achat) values (NULL, 'Dark', 'Michelle','michelledarkl@gmail.com','1969-06-02','France', 'Paris', '75014', NULL);
+
+INSERT INTO t_utilisateurs (id, nom, prenom, email, date_naissance, pays, ville, code_postal, nombre_achat) values (NULL, 'Lune', 'Claudine','claudinelune@gmail.com','1975-03-05','France', 'Paris', '75012', NULL);
+
+SELECT * FROM t_utilisateurs ORDER BY ville ASC
+
+SELECT nom, prenom FROM t_utilisateurs ORDER BY nom ASC
+
+SELECT * FROM t_utilisateurs WHERE ville='Paris'
+
+DELETE FROM t_utilisateurs WHERE nom='Dupont'
