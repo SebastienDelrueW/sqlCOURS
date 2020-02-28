@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="fr">
 
 <head>
@@ -32,6 +33,25 @@
             .bd-placeholder-img-lg {
                 font-size: 3.5rem;
             }
+        }
+        
+        td:hover,
+        th:hover {
+            background-color: #bfc6de;
+        }
+        
+        code {
+            color: #0c5ec7b3;
+            /* box-shadow: 2px 2px 3px #aaa; */
+        }
+        
+        a.btn.btn-secondary:hover {
+            background-color: maroon;
+            box-shadow: 8px 8px 12px #aaa;
+        }
+        
+        .btn.bg-white {
+            box-shadow: 8px 8px 12px #aaa;
         }
     </style>
 </head>
@@ -283,14 +303,14 @@
                     <h2>Requêtes imbriquées</h2>
                     <ul>
                         <li>Isoler une valeur minimum /maximum avec MIN() ou /MAX() : <code> SELECT MIN(salaire) FROM employes</code></li>
-                        <li>Requête imbriquées :<code> SELECT prenom, salaire FROM employes WHERE salaire = (SELECT MIN(salaire) FROM employes</code>)</li>
+                        <li>Requête imbriquées :<code> SELECT prenom, salaire FROM employes WHERE salaire = (SELECT MIN(salaire) FROM employes)</code></li>
                     </ul>
                     <h2>Conditions multiples</h2>
                     <ul>
                         <li>Avec plusieurs valeurs avec le mot-clef IN : <code> SELECT nom, prenom, service FROM employes WHERE service IN('comptabilité', 'informatique')</code></li>
                         <li>Avec plusieurs valeurs avec le mot-clef NOT IN :
-                            <code> SELECT nom, prenom, service FROM employes WHERE service NOT IN('comptabilité', 'informatique')</code></li>
-                        <span class="small font-italic">Permet d'exclure comptabilité et informatique</span>
+                            <code> SELECT nom, prenom, service FROM employes WHERE service NOT IN('comptabilité', 'informatique')</code>
+                            <span class="small font-italic">Permet d'exclure comptabilité et informatique</span></li>
                         <li>Plusieurs conditions avec différents champs et diférentes valeurs : <code> SELECT nom, prenom, service, salaire FROM employes WHERE service='commercial' AND salaire&lt;=2000</code></li>
                         <li>Ordre de priorité sur les conditions AND et OR : <code> SELECT nom, prenom, service, salaire FROM employes WHERE service ='production' AND salaire = 1900 OR salaire = 2300</code></li>
                         <li>Ordre de priorité sur les conditions AND et OR :
@@ -319,15 +339,16 @@
             </div>
             <!-- /row -->
         </div>
-        </div>
     </main>
     <footer class="container">
         <p>&copy; Company 2017-2020 James Bond</p>
     </footer>
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js " integrity=" sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js " integrity=" sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo " crossorigin=" anonymous "></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js " integrity=" sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6 " crossorigin=" anonymous "></script>
 
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </body>
 
 </html>
