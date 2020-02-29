@@ -318,7 +318,7 @@
                             <code> SELECT nom, prenom, service, salaire FROM employes WHERE service ='production' AND (salaire = 1900 OR salaire = 2300)</code>
                             <span class="small font-italic">Pour garantir l'ordre naturel de lecture (de la gauche vers la droite), nous utiliserons des parenthèses</span>
                         </li>
-                        <li>Les regroupements avec GROUP BY ; <code> SELECT service, COUNT(*) AS nombre FROM employes GROUP BY service</code></li>
+                        <li>Les regroupements avec GROUP BY : <code> SELECT service, COUNT(*) AS nombre FROM employes GROUP BY service</code></li>
                         <li>Les regroupements avec une conditions HAVING COUNT() : <code>SELECT service, COUNT(*) AS nombre FROM employes GROUP BY service HAVING COUNT(*) > 2;</code></li>
                     </ul>
                 </div>
