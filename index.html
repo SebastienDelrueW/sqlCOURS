@@ -145,19 +145,11 @@
                 <ul>
                     <li>Créer une BDD :<code> CREATE DATABASE basetest CHARACTER SET 'utf8';</code></li>
                     <li>Supprimer une BDD :<code> DROP DATABASE IF EXISTS basetest</code></li>
-                    <li>Créer une table :<code> CREATE TABLE t_utilisateurs
-                    (
-                    id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
-                    nom VARCHAR(100),
-                    prenom VARCHAR(100),
-                    email VARCHAR(255),
-                    date_naissance DATE,
-                    pays VARCHAR(255),
-                    ville VARCHAR(255),
-                    code_postal VARCHAR(5),
-                    nombre_achat INT
-                    )
-                    </code></li>
+                    <li>Créer une table :<code> CREATE TABLE t_utilisateurs</code></li>
+
+                    ( id INT PRIMARY KEY NOT NULL AUTO_INCREMENT, nom VARCHAR(100), prenom VARCHAR(100), email VARCHAR(255), date_naissance DATE, pays VARCHAR(255), ville VARCHAR(255), code_postal VARCHAR(5), nombre_achat INT )
+                    </code>
+                    </li>
                     <li>Insérer dans une table :
                         <code> INSERT INTO t_utilisateurs (id, nom, prenom, email, date_naissance, pays, ville, code_postal, nombre_achat) values
                     (NULL, 'Caroll', 'Stéphanie','stephaniecaroll@gmail.com','1980-01-02','Belgique', 'Bruxelle', '92500', NULL);</code></li>
