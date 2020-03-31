@@ -304,7 +304,7 @@
                         <li>Avec plusieurs valeurs avec le mot-clef NOT IN :
                             <code> SELECT nom, prenom, service FROM employes WHERE service NOT IN('comptabilité', 'informatique')</code>
                             <span class="small font-italic">Permet d'exclure comptabilité et informatique</span></li>
-                        <li>Plusieurs conditions avec différents champs et diférentes valeurs : <code> SELECT nom, prenom, service, salaire FROM employes WHERE service='commercial' AND salaire&lt;=2000</code></li>
+                        <li>Plusieurs conditions avec différents champs et diférentes valeurs : <code> SELECT nom, prenom, service, salaire FROM employes WHERE service ='commercial' AND salaire &lt;= 2000</code></li>
                         <li>Ordre de priorité sur les conditions AND et OR : <code> SELECT nom, prenom, service, salaire FROM employes WHERE service ='production' AND salaire = 1900 OR salaire = 2300</code></li>
                         <li>Ordre de priorité sur les conditions AND et OR :
                             <code> SELECT nom, prenom, service, salaire FROM employes WHERE service ='production' AND (salaire = 1900 OR salaire = 2300)</code>
